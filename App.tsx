@@ -6,8 +6,8 @@ import {
   View,
   Image,
 } from "react-native";
-import QRCode from "react-native-qrcode-svg";
 import Header from "./components/header/Header";
+import QRdisplay from "./components/qrDisplay/QRdisplay";
 
 export default function App() {
   const [displayMyQR, setDisplayMyQR] = useState<boolean>(false);
@@ -89,11 +89,7 @@ export default function App() {
           </View>
         </View>
       ) : (
-        <View style={styles.bodystails}>
-          <View style={styles.CentrarcodigoQR}>
-            <QRCode value="https://github.com/adhernea" />
-          </View>
-        </View>
+        <QRdisplay></QRdisplay>
       )}
     </View>
   );
@@ -130,12 +126,5 @@ const styles = StyleSheet.create({
     fontStyle: "italic",
     fontSize: 16,
     backgroundColor: "silver",
-  },
-  CentrarcodigoQR: {
-    justifyContent: "center",
-    borderWidth: 1,
-    width: "100%",
-    height: "100%",
-    alignItems: "center",
   },
 });
