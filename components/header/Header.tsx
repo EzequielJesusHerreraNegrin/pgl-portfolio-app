@@ -1,28 +1,20 @@
-import { useState } from "react";
 import { Button, Pressable, StyleSheet, Text, View } from "react-native";
 
-const Header = () => {
-  const [displayMyQR, setDisplayMyQR] = useState(true);
+type headerPropsTypes = {
+  setDisplayMyQR: Function;
+};
+
+const Header = ({ setDisplayMyQR }: headerPropsTypes) => {
   return (
-    <View style={styles.topContainer}>
-      <Text style={styles.firsttoprowContainer}>My Portfolio App</Text>
-      <View style={styles.rowTopSecondContainer}>
+    <View style={styles.headerContainer}>
+      <Text style={styles.firstHeaderContainer}>My Portfolio App</Text>
+      <View style={styles.secondHeaderContainer}>
         <Pressable
-          style={styles.buttonruta}
+          style={styles.buttonBox}
           onPress={() => setDisplayMyQR(true)}
+          accessibilityLabel="Un botón pal QR"
         >
-          <Text
-            style={{
-              ...{
-                color: "white",
-                fontWeight: "bold",
-                textTransform: "uppercase",
-              },
-              ...styles.shadoxboxing,
-            }}
-          >
-            Mi info
-          </Text>
+          <Text style={styles.shadowedBox}>Conóceme</Text>
         </Pressable>
         <Button
           onPress={() => setDisplayMyQR(false)}
@@ -36,28 +28,31 @@ const Header = () => {
 };
 
 const styles = StyleSheet.create({
-  topContainer: {
+  headerContainer: {
     height: "15%",
     paddingTop: 50,
     width: "100%",
   },
-  firsttoprowContainer: {
+  firstHeaderContainer: {
     backgroundColor: "gray",
     textAlign: "center",
     fontWeight: "bold",
     textAlignVertical: "center",
     fontSize: 30,
   },
-  rowTopSecondContainer: {
+  secondHeaderContainer: {
     flexDirection: "row",
     backgroundColor: "darkgray",
     justifyContent: "center",
     alignItems: "center",
   },
-  buttonruta: {
-    width: "50%",
+  buttonBox: {
+    width: "40%",
   },
-  shadoxboxing: {
+  shadowedBox: {
+    color: "white",
+    fontWeight: "bold",
+    textTransform: "uppercase",
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
