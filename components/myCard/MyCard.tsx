@@ -3,7 +3,7 @@ import { View, Image, Text, StyleSheet } from "react-native";
 
 const MyCard = () => {
   return (
-    <View style={{ flexDirection: "row", alignItems: "center" }}>
+    <View style={{ flexDirection: "column", alignItems: "center", paddingTop: 10 }}>
       <Image
         style={styles.avatar}
         source={require("../../assets/SofyanAmrabat.jpg")}
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     backgroundColor: "lightgray",
     padding: 10,
     borderRadius: 10,
-    width: "70%",
+    width: "90%",
   },
   infoItemTitle: {
     textAlign: "center",

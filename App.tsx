@@ -25,7 +25,7 @@ export default function App() {
         <QRdisplay></QRdisplay>
       )}
     </View>
-  );  
+  );
 }
 
 const styles = StyleSheet.create({

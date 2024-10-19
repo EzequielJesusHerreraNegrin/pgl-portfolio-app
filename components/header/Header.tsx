@@ -29,8 +29,9 @@ const Header = ({ setDisplayMyQR }: headerPropsTypes) => {
 
 const styles = StyleSheet.create({
   headerContainer: {
+    backgroundColor: "gray",
     height: "15%",
-    paddingTop: 50,
+    paddingTop: 40,
     width: "100%",
   },
   firstHeaderContainer: {
