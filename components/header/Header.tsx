@@ -1,27 +1,33 @@
-import { Button, Pressable, StyleSheet, Text, View } from "react-native";
+import React from "react";
+import {
+  Button,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 
 type headerPropsTypes = {
   setDisplayMyQR: Function;
 };
 
 const Header = ({ setDisplayMyQR }: headerPropsTypes) => {
+  
+
   return (
     <View style={styles.headerContainer}>
+      
       <Text style={styles.firstHeaderContainer}>My Portfolio App</Text>
       <View style={styles.secondHeaderContainer}>
-        <Pressable
-          style={styles.buttonBox}
-          onPress={() => setDisplayMyQR(true)}
-          accessibilityLabel="Un botón pal QR"
-        >
-          <Text style={styles.shadowedBox}>Conóceme</Text>
-        </Pressable>
-        <Button
-          onPress={() => setDisplayMyQR(false)}
-          title="Mi Repo"
-          color="light-gray"
-          accessibilityLabel="Un botón pal QR"
-        />
+        <Button      
+        title="Conóceme"
+        color={"#9adcb9"}
+        onPress={() => setDisplayMyQR(true)}>
+      </Button>
+        <Button      
+        title="MI REPO"
+        color={"#9adcb9"}
+        onPress={() => setDisplayMyQR(false)}>
+      </Button>
       </View>
     </View>
   );
@@ -29,26 +35,32 @@ const Header = ({ setDisplayMyQR }: headerPropsTypes) => {
 
 const styles = StyleSheet.create({
   headerContainer: {
-    backgroundColor: "gray",
+    backgroundColor: "#5ac7aa",
     height: "15%",
     paddingTop: 40,
     width: "100%",
   },
   firstHeaderContainer: {
-    backgroundColor: "gray",
+    backgroundColor: "#5ac7aa",
     textAlign: "center",
     fontWeight: "bold",
     textAlignVertical: "center",
     fontSize: 30,
+    bottom: 10,
   },
   secondHeaderContainer: {
+    gap: 30,
     flexDirection: "row",
-    backgroundColor: "darkgray",
+    backgroundColor: "#5ac7aa",
     justifyContent: "center",
     alignItems: "center",
   },
   buttonBox: {
-    width: "40%",
+    marginLeft: 30,
+    marginRight: 30,
+    padding: 7,
+    backgroundColor: "#9adcb9",
+    width: "auto",
   },
   shadowedBox: {
     color: "white",

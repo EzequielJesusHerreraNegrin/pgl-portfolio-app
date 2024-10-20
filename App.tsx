@@ -6,7 +6,7 @@ import MyCard from "./components/myCard/MyCard";
 import ItemList from "./components/itemList/ItemList";
 
 export default function App() {
-  const [displayMyQR, setDisplayMyQR] = useState<boolean>(false);
+  const [displayMyQR, setDisplayMyQR] = useState<boolean>(true);
 
   return (
     <View style={styles.container}>
