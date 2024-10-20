@@ -12,7 +12,7 @@ const Header = ({ setDisplayMyQR }: headerPropsTypes) => {
         <Pressable
           style={styles.buttonBox}
           onPress={() => setDisplayMyQR(true)}
-          accessibilityLabel="Un botón pal QR"
+          accessibilityLabel="Un botón pa mi seccion"
         >
           <Text style={styles.shadowedBox}>Conóceme</Text>
         </Pressable>
