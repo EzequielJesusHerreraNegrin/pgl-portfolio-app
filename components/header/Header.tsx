@@ -1,45 +1,61 @@
 import React from "react";
-import {
-  Button,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { Button, Pressable, StyleSheet, Text, View } from "react-native";
+import { headerStyles } from "./HeaderStyles";
+import { headerPropsTypes } from "../../Types/Props";
 
-type headerPropsTypes = {
-  setDisplayMyQR: Function;
-};
-
-const Header = ({ setDisplayMyQR }: headerPropsTypes) => {
-  
-
+const Header = ({
+  setDisplayMyQR,
+  setOpacityMode,
+  opacityMode,
+}: headerPropsTypes) => {
   return (
-    <View style={styles.headerContainer}>
-      
-      <Text style={styles.firstHeaderContainer}>My Portfolio App</Text>
-      <View style={styles.secondHeaderContainer}>
-        <Button      
-        title="Conóceme"
-        color={"#9adcb9"}
-        onPress={() => setDisplayMyQR(true)}>
-      </Button>
-        <Button      
-        title="MI REPO"
-        color={"#9adcb9"}
-        onPress={() => setDisplayMyQR(false)}>
-      </Button>
+    <View style={headerStyles(opacityMode).headerContainer}>
+      <Text style={headerStyles(opacityMode).headerTitle}>
+        My Portfolio App
+      </Text>
+      <View style={headerStyles(opacityMode).secondHeaderContainer}>
+        <Button
+          title="Conóceme"
+          color={opacityMode ? "#9adcb9" : "#697477"}
+          onPress={() => setDisplayMyQR(true)}
+        />
+        <Button
+          title="MI REPO"
+          color={opacityMode ? "#9adcb9" : "#697477"}
+          onPress={() => setDisplayMyQR(false)}
+        />
+        <Pressable onPress={() => setOpacityMode(!opacityMode)}>
+          <Text style={headerStyles(opacityMode).opacityButton}>{opacityMode ? "Dark" : "Bright"}</Text>
+        </Pressable>
       </View>
     </View>
   );
 };
 
-const styles = StyleSheet.create({
+/* const darktStyles = StyleSheet.create({
   headerContainer: {
-    backgroundColor: "#5ac7aa",
+    backgroundColor: "#000",
     height: "15%",
     paddingTop: 40,
     width: "100%",
   },
+}) */
+
+/*   function headerContainer (someBoolean:boolean) {
+    const styles = StyleSheet.create({
+      conditionalStyle:{
+        backgroundColor: someBoolean ? "#5ac7aa" : "#1a1a10",
+        color: someBoolean ? "#fff" : "#000",
+        height: "15%",
+        paddingTop: 40,
+        width: "100%",
+      }
+  });
+    return styles
+  } */
+
+const brightStyles = StyleSheet.create({
+  /*  */
   firstHeaderContainer: {
     backgroundColor: "#5ac7aa",
     textAlign: "center",
@@ -49,24 +65,24 @@ const styles = StyleSheet.create({
     bottom: 10,
   },
   secondHeaderContainer: {
+    backgroundColor: "#5ac7aa",
     gap: 30,
     flexDirection: "row",
-    backgroundColor: "#5ac7aa",
     justifyContent: "center",
     alignItems: "center",
   },
   buttonBox: {
+    backgroundColor: "#9adcb9",
     marginLeft: 30,
     marginRight: 30,
     padding: 7,
-    backgroundColor: "#9adcb9",
     width: "auto",
   },
   shadowedBox: {
     color: "white",
+    shadowColor: "#000",
     fontWeight: "bold",
     textTransform: "uppercase",
-    shadowColor: "#000",
     shadowOffset: {
       width: 0,
       height: 7,

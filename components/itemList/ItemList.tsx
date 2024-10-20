@@ -1,43 +1,29 @@
 import React from "react";
 import { Text, View, StyleSheet } from "react-native";
+import { myCardPropsTypes } from "../../Types/Props";
+import { itemListStyles } from "./ItemListStyles";
 
-const ItemList = () => {
+const ItemList = ({
+    opacityMode,
+  }: myCardPropsTypes) => {
     return (
         <View>
-            <View style={styles.listContainer}>
-                <Text style={styles.listItem}>Salir a pasear</Text>
-                <Text style={styles.listItem}>Senderismo</Text>
-                <Text style={styles.listItem}>Ir a la playita</Text>
-                <Text style={styles.listItem}>Domingos de misa</Text>
-                <Text style={styles.listItem}>La guitarrita</Text>
-                <Text style={styles.listItem}>El monte con lluvia</Text>
-                <Text style={styles.listItem}>Viajar</Text>
-                <Text style={styles.listItem}>Música variadita</Text>
-                <Text style={styles.listItem}>Anime</Text>
-                <Text style={styles.listItem}>Ducharme</Text>
-                <Text style={styles.listItem}>Videojuegos</Text>
-                <Text style={styles.listItem}>Ir de cenar romántica</Text>
+            <View style={itemListStyles(opacityMode).listContainer}>
+                <Text style={itemListStyles(opacityMode).listItem}>Salir a pasear</Text>
+                <Text style={itemListStyles(opacityMode).listItem}>Ver Anime</Text>
+                <Text style={itemListStyles(opacityMode).listItem}>Hacer Chuletadas</Text>
+                <Text style={itemListStyles(opacityMode).listItem}>Domingos de pelis</Text>
+                <Text style={itemListStyles(opacityMode).listItem}>La Saxofonista</Text>
+                <Text style={itemListStyles(opacityMode).listItem}>Amaneceres</Text>
+                <Text style={itemListStyles(opacityMode).listItem}>Viajar</Text>
+                <Text style={itemListStyles(opacityMode).listItem}>Música que no sea regueton</Text>
+                <Text style={itemListStyles(opacityMode).listItem}>Tecnología</Text>
+                <Text style={itemListStyles(opacityMode).listItem}>Entrenar</Text>
+                <Text style={itemListStyles(opacityMode).listItem}>Videojuegos</Text>
+                <Text style={itemListStyles(opacityMode).listItem}>Cenar con Amigos</Text>
             </View>
         </View>
     );
 };
-
-const styles = StyleSheet.create({
-    listItem: {
-        borderColor: "black",
-        borderWidth: 1,
-        borderStyle: "dashed",
-        padding: 20,
-        color: "darkred",
-        textAlign: "center",
-        fontWeight: "bold",
-        fontStyle: "italic",
-        fontSize: 16,
-        backgroundColor: "silver",
-    },
-    listContainer: {
-        padding: 10,
-    },
-});
 
 export default ItemList;
