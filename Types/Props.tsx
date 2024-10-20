@@ -12,3 +12,6 @@ export type itemListPropsTypes = {
     opacityMode: boolean;
 };
 
+export type qrDisplayPropsTypes = {
+    opacityMode: boolean;
+};

@@ -24,7 +24,7 @@ export default function App() {
           </View>
         </View>
       ) : (
-        <QRdisplay></QRdisplay>
+        <QRdisplay opacityMode={opacityMode}></QRdisplay>
       )}
     </View>
   );
