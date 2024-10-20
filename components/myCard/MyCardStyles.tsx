@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export function myCardStyles(someBoolean: boolean) {
     const darkBackgorund = "#1a1a10";
-    const brightBackgorund = "#5ac7aa";
+    const brightBackgorund = "#eab676";
 
     const darkText_Title = "#2A3B47";
     const brightText = "#000";

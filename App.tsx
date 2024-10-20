@@ -18,7 +18,7 @@ export default function App() {
             <MyCard opacityMode={opacityMode}></MyCard>
             <Text style={styles.listTitle}>cosas que me gustan mucho:</Text>
             <ScrollView>
-              <ItemList></ItemList>
+              <ItemList opacityMode={opacityMode}></ItemList>
             </ScrollView>
           </View>
         </View>

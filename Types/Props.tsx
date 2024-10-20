@@ -7,3 +7,7 @@ export type headerPropsTypes = {
 export type myCardPropsTypes = {
     opacityMode: boolean;
 };
+
+export type itemListPropsTypes = {
+    opacityMode: boolean;
+};
