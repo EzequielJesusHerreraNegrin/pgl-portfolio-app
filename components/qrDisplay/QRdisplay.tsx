@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import QRCode from "react-native-qrcode-svg";
-
+// Intentar gif variable en el fondo
 const QRdisplay = () => {
   return (
     <View style={styles.bodystails}>
@@ -14,6 +14,7 @@ const QRdisplay = () => {
 
 const styles = StyleSheet.create({
   bodystails: {
+    backgroundColor: "",
     width: "100%",
     borderWidth: 2,
     borderColor: "black",

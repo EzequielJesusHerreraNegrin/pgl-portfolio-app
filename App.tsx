@@ -7,10 +7,11 @@ import ItemList from "./components/itemList/ItemList";
 
 export default function App() {
   const [displayMyQR, setDisplayMyQR] = useState<boolean>(true);
+  const [opacityMode, setOpacityMode] =useState(true)
 
   return (
     <View style={styles.container}>
-      <Header setDisplayMyQR={setDisplayMyQR}></Header>
+      <Header setDisplayMyQR={setDisplayMyQR} setOpacityMode={setOpacityMode} opacityMode={opacityMode}></Header>
       {displayMyQR ? (
         <View style={styles.bodystails}>
           <View>
