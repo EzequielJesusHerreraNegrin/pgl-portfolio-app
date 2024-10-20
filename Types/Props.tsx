@@ -11,3 +11,4 @@ export type myCardPropsTypes = {
 export type itemListPropsTypes = {
     opacityMode: boolean;
 };
+

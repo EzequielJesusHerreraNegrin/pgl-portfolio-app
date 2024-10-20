@@ -4,20 +4,21 @@ import Header from "./components/header/Header";
 import QRdisplay from "./components/qrDisplay/QRdisplay";
 import MyCard from "./components/myCard/MyCard";
 import ItemList from "./components/itemList/ItemList";
+import { appStyles } from "./AppStyles";
 
 export default function App() {
   const [displayMyQR, setDisplayMyQR] = useState<boolean>(true);
   const [opacityMode, setOpacityMode] =useState(true)
 
   return (
-    <View style={styles.container}>
+    <View style={appStyles(opacityMode).container}>
       <Header setDisplayMyQR={setDisplayMyQR} setOpacityMode={setOpacityMode} opacityMode={opacityMode}></Header>
       {displayMyQR ? (
-        <View style={styles.bodystails}>
+        <View style={appStyles(opacityMode).bodystails}>
           <View>
             <MyCard opacityMode={opacityMode}></MyCard>
-            <Text style={styles.listTitle}>cosas que me gustan mucho:</Text>
-            <ScrollView>
+            <Text style={appStyles(opacityMode).listTitle}>cosas que me gustan mucho:</Text>
+            <ScrollView showsVerticalScrollIndicator={false}>
               <ItemList opacityMode={opacityMode}></ItemList>
             </ScrollView>
           </View>
@@ -28,27 +29,3 @@ export default function App() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  bodystails: {
-    width: "100%",
-    borderWidth: 2,
-    borderColor: "black",
-    alignItems: "center",
-    justifyContent: "space-between",
-    height: "85%",
-  },
-  listTitle: {
-    color: "veryblack",
-    fontWeight: "900",
-    textTransform: "capitalize",
-    fontSize: 20,
-    textAlign: "center",
-  },
-});
