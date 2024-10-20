@@ -15,7 +15,7 @@ export default function App() {
       {displayMyQR ? (
         <View style={styles.bodystails}>
           <View>
-            <MyCard></MyCard>
+            <MyCard opacityMode={opacityMode}></MyCard>
             <Text style={styles.listTitle}>cosas que me gustan mucho:</Text>
             <ScrollView>
               <ItemList></ItemList>

@@ -1,12 +1,7 @@
 import React from "react";
 import { Button, Pressable, StyleSheet, Text, View } from "react-native";
-import { headerStyles, secondHeaderContainer } from "./HeaderStyles";
-
-type headerPropsTypes = {
-  setDisplayMyQR: Function;
-  setOpacityMode: Function;
-  opacityMode: boolean;
-};
+import { headerStyles } from "./HeaderStyles";
+import { headerPropsTypes } from "../../Types/Props";
 
 const Header = ({
   setDisplayMyQR,
@@ -21,12 +16,12 @@ const Header = ({
       <View style={headerStyles(opacityMode).secondHeaderContainer}>
         <Button
           title="Conóceme"
-          color={opacityMode ? "#9adcb9" : "#3e7055"}
+          color={opacityMode ? "#9adcb9" : "#697477"}
           onPress={() => setDisplayMyQR(true)}
         />
         <Button
           title="MI REPO"
-          color={opacityMode ? "#9adcb9" : "#3e7055"}
+          color={opacityMode ? "#9adcb9" : "#697477"}
           onPress={() => setDisplayMyQR(false)}
         />
         <Pressable onPress={() => setOpacityMode(!opacityMode)}>
