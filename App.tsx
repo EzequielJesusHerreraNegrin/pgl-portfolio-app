@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ScrollView, StyleSheet, View, Text } from "react-native";
+import { ScrollView, View, Text } from "react-native";
 import Header from "./components/header/Header";
 import QRdisplay from "./components/qrDisplay/QRdisplay";
 import MyCard from "./components/myCard/MyCard";
@@ -8,7 +8,7 @@ import { appStyles } from "./AppStyles";
 
 export default function App() {
   const [displayMyQR, setDisplayMyQR] = useState<boolean>(true);
-  const [opacityMode, setOpacityMode] =useState(true)
+  const [opacityMode, setOpacityMode] = useState(true)
 
   return (
     <View style={appStyles(opacityMode).container}>

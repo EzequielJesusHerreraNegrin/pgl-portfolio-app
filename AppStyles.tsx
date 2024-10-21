@@ -7,9 +7,6 @@ export function appStyles(someBoolean: boolean) {
     const darkListItemBorder = "#2A3B47";
     const brightListItemBorder = "#332e1d";
 
-    const darkListItemBackgrund = "#1083D6";
-    const brightListItemBackgrund = "#efeba9";
-    
     const darkText_Title = "#fff";
     const brightText_Title = "#000";
 
