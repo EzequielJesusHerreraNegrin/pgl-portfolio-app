@@ -9,9 +9,6 @@ export function itemListStyles(someBoolean: boolean) {
 
     const darkListItemBackgrund = "#1083D6";
     const brightListItemBackgrund = "#efeba9";
-    /* 
-    const darkListItemBorder = "#1083D6";
-    const brightListItemBorder = "#efeba9"; */
 
     const styles = StyleSheet.create({
         listItem: {
@@ -31,7 +28,7 @@ export function itemListStyles(someBoolean: boolean) {
             backgroundColor: someBoolean ? brightBackgorund : darkBackgorund,
             padding: 10,
             borderRadius: 10,
-        }   
+        }
     });
     return styles
 }

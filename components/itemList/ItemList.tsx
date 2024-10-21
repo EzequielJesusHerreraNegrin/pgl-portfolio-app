@@ -1,11 +1,11 @@
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View } from "react-native";
 import { myCardPropsTypes } from "../../Types/Props";
 import { itemListStyles } from "./ItemListStyles";
 
 const ItemList = ({
     opacityMode,
-  }: myCardPropsTypes) => {
+}: myCardPropsTypes) => {
     return (
         <View>
             <View style={itemListStyles(opacityMode).listContainer}>
